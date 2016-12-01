@@ -11,13 +11,11 @@
     tools:context="com.cloudhuan.airbot.MainActivity">
 
     <Button
-        android:text="普通启动AIR"
+        android:text="带Log记录启动Air"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="18dp"
         android:id="@+id/button"
-        android:layout_marginLeft="31dp"
-        android:layout_marginStart="31dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -26,10 +24,19 @@
         android:text="启动UI自动化"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_marginTop="56dp"
+        android:layout_below="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <CheckBox
+        android:text="记录前是否清除历史数据"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox"
+        android:layout_alignBaseline="@+id/button"
         android:layout_alignBottom="@+id/button"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="55dp"
-        android:layout_marginEnd="55dp"
-        android:id="@+id/button2" />
+        android:layout_toRightOf="@+id/button"
+        android:layout_toEndOf="@+id/button" />
 </RelativeLayout>
