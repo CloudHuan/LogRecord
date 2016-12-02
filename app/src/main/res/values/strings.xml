@@ -1,4 +1,3 @@
 <resources>
-    <string name="app_name">AirBot</string>
-    <string name="air_app_name">com.arashivision.insta360atom</string>
+    <string name="app_name">LogRecord</string>
 </resources>

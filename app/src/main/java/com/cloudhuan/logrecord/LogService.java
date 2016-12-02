@@ -1,4 +1,4 @@
-package com.cloudhuan.airbot;
+package com.cloudhuan.logrecord;
 
 import android.app.Service;
 import android.content.Intent;
@@ -58,10 +58,10 @@ public class LogService extends Service {
 
     private void initPath(){
         Log.i(TAG,"init path");
-        File f = new File(AirBotConst.LOG_DIR);
+        File f = new File(LogRecordConst.LOG_DIR);
         if(!f.exists()){
             boolean b = f.mkdirs();
-            Log.i(TAG,"not exist,create it:"+AirBotConst.LOG_DIR+b);
+            Log.i(TAG,"not exist,create it:"+ LogRecordConst.LOG_DIR+b);
         }
         File[] fs = f.listFiles(new FileFilter() {
             @Override
@@ -70,7 +70,7 @@ public class LogService extends Service {
             }
         });
         if(fs.length<1){
-            new File(AirBotConst.TODAY_DIR).mkdirs();
+            new File(LogRecordConst.TODAY_DIR).mkdirs();
             Log.i(TAG,"create taday folder::"+Utils.getFolderTime());
         }
     }

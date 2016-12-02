@@ -1,29 +1,20 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        config {
-            keyAlias 'insta360atom'
-            keyPassword 'arashivision'
-            storeFile file('E:/project/insta360_atom.jks')
-            storePassword 'arashivision'
-        }
-    }
+
     compileSdkVersion 24
     buildToolsVersion "25.0.0"
     defaultConfig {
-        applicationId "com.cloudhuan.airbot"
+        applicationId "com.cloudhuan.logrecord"
         minSdkVersion 16
-        targetSdkVersion 24
+        targetSdkVersion 21
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.config
         }
         debug {
         }

@@ -1,4 +1,4 @@
-package com.cloudhuan.airbot;
+package com.cloudhuan.logreocrd;
 
 import org.junit.Test;
 

@@ -1,10 +1,10 @@
-package com.cloudhuan.airbot;
+package com.cloudhuan.logrecord;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Created by Administrator on 2016/12/1.
+ * Created by cloudhuan on 2016/12/1.
  */
 
 public class Utils {

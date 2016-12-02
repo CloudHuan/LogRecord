@@ -8,25 +8,15 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.cloudhuan.airbot.MainActivity">
+    tools:context="com.cloudhuan.logreocrd.com.cloudhuan.logrecord.MainActivity">
 
     <Button
-        android:text="带Log记录启动Air"
+        android:text="开始记录Log"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:id="@+id/button"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:text="启动UI自动化"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:layout_marginTop="56dp"
-        android:layout_below="@+id/button"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -39,4 +29,13 @@
         android:layout_alignBottom="@+id/button"
         android:layout_toRightOf="@+id/button"
         android:layout_toEndOf="@+id/button" />
+
+    <Button
+        android:text="打印100个log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="114dp"
+        android:id="@+id/button2" />
 </RelativeLayout>

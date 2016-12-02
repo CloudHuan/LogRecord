@@ -1,12 +1,12 @@
-package com.cloudhuan.airbot;
+package com.cloudhuan.logrecord;
 
 import android.os.Environment;
 
 /**
- * Created by chenzhe on 2016/12/1.
+ * Created by cloudhuan on 2016/12/1.
  */
 
-public class AirBotConst {
+public class LogRecordConst {
 
     public static final String LOG_DIR = Environment.getExternalStorageDirectory()+"/AirBotLog";
 
@@ -14,5 +14,5 @@ public class AirBotConst {
 
     public static final String NOW_FILE_NAME = Environment.getExternalStorageDirectory()+"/AirBotLog/"+Utils.getFolderTime()+"/"+Utils.getFileTime()+".log";
 
-    public static final long SPLIT_TIME = 60 * 1000;  //log分片时间
+    public static final long SPLIT_TIME = 10 * 1000;  //log分片时间
 }

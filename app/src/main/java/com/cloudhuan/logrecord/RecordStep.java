@@ -1,19 +1,15 @@
-package com.cloudhuan.airbot;
+package com.cloudhuan.logrecord;
 
-import android.os.SystemClock;
 import android.util.Log;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.Timer;
-import java.util.TimerTask;
 
 /**
- * Created by chenzhe on 2016/12/1.
+ * Created by cloudhuan on 2016/12/1.
  */
 
 public class RecordStep {
@@ -49,15 +45,15 @@ public class RecordStep {
             }
             inputStream = Runtime.getRuntime().exec("logcat -v time").getInputStream();
             bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-            fileWriter = new FileWriter(AirBotConst.NOW_FILE_NAME);
+            fileWriter = new FileWriter(LogRecordConst.NOW_FILE_NAME);
             long s_time = System.currentTimeMillis();
             String str = null;
             while((str=bufferedReader.readLine())!=null){
                 //Log.i(TAG,str);
-                if(System.currentTimeMillis() - s_time > AirBotConst.SPLIT_TIME){
+                if(System.currentTimeMillis() - s_time > LogRecordConst.SPLIT_TIME){
                     fileWriter.flush();
                     fileWriter.close();
-                    fileWriter = new FileWriter(AirBotConst.TODAY_DIR+"/"+Utils.getFileTime()+".log");
+                    fileWriter = new FileWriter(LogRecordConst.TODAY_DIR+"/"+Utils.getFileTime()+".log");
                     //Log.i(TAG,"change record file!!!"+Utils.getFileTime());
                     s_time = System.currentTimeMillis();
                 }
@@ -83,21 +79,3 @@ public class RecordStep {
     }
 }
 
-class LogWriter extends FileWriter{
-
-    long bTime;
-    String fileName;
-
-    public LogWriter(String fileName,long time) throws IOException {
-        super(fileName);
-        this.fileName = fileName;
-        this.bTime = time;
-    }
-
-    public void write(String str,long wTime) throws IOException {
-        if(wTime - bTime > 10 * 1000){
-
-        }
-        super.write(str);
-    }
-}
